@@ -1,6 +1,5 @@
 import os
 import openai
-openai.api_key = "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"
 
 import json
 output_file_path = "sports_gptoutput_0_shot.jsonl"
