@@ -176,21 +176,21 @@ def load_data_train_last_line_test(train_file, test_file, item_desc, args):
     output_file = f"{args.experiment_run}_train_last_2_test_first.txt"
     output_file2 = f"{args.experiment_run}_test_first.txt"
 
-with open(train_file, 'r') as f:
-    next(f)
-    for line in f:
-        # Skip empty lines
-        if line.strip():
-            # Extract user_id (first field)
-            user_id = line.split()[0]
-            # If the user_id is not in the dictionary, initialize with an empty list
-            if user_id not in train_last_lines:
-                train_last_lines[user_id] = []
-            # Append the current line for the user_id
-            train_last_lines[user_id].append(line.strip())
-            # Keep only the last two lines for each user_id
-            if len(train_last_lines[user_id]) > 2:
-                train_last_lines[user_id].pop(0)
+    with open(train_file, 'r') as f:
+        next(f)
+        for line in f:
+            # Skip empty lines
+            if line.strip():
+                # Extract user_id (first field)
+                user_id = line.split()[0]
+                # If the user_id is not in the dictionary, initialize with an empty list
+                if user_id not in train_last_lines:
+                    train_last_lines[user_id] = []
+                # Append the current line for the user_id
+                train_last_lines[user_id].append(line.strip())
+                # Keep only the last two lines for each user_id
+                if len(train_last_lines[user_id]) > 2:
+                    train_last_lines[user_id].pop(0)
 
 
     with open(train_file, 'r') as f:
