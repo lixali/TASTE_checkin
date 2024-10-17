@@ -1,8 +1,8 @@
 #!/bin/sh
 
-model_path="/data/datasets/hf_cache/sample/TASTE_benchmark_run/sports/name/best_dev/"
+model_path="/home/lili2307338/meta/TASTE_benchmark_run/sports/name/best_dev/"
 
-CUDA_VISIBLE_DEVICES=0 python build_prompt.py  \
+CUDA_VISIBLE_DEVICES=0 python3 build_prompt.py  \
     --data_name sports  \
     --experiment_name name  \
     --seed 2022  \

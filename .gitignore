@@ -7,6 +7,6 @@
 # Do not ignore .sh and .py files in any directory
 !**/*.sh
 !**/*.py
-
+!*.yml
 # Do not ignore directories (allows tracking .sh and .py files inside)
 !*/

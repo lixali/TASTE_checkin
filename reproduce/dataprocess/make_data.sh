@@ -3,7 +3,7 @@
 
 # T5 Family
 model="t5-base"
-data_set="sports"
+data_set="toys"
 
 # dataset format switch
 if [ $data_set = "yelp" ]
@@ -20,7 +20,7 @@ tokenizer_path="pretrained_model/${model}"
 
 echo $base_dir
 
-python make_data.py  \
+python3 make_data.py  \
     --data_name $set  \
     --sample_num 100 \
     --train_file "${base_dir}/train.txt"  \
